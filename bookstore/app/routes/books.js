@@ -1,8 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  queryParams: {
-    limit: {
+  queryParams:{
+    limit:{
       refreshModel: true
     }
   },
@@ -12,10 +12,9 @@ export default Ember.Route.extend({
   },
 
   actions: {
-
     showAll() {
-    	const total = this.controllerFor('books').get('total');
-    	this.transitionTo({ queryParams: { limit: total }}); // total?
+      const total = this.controllerFor('books').get('total');
+      this.transitionTo({ queryParams: { limit: total }}); // total?
     }
   }
 });

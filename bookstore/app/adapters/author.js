@@ -6,8 +6,6 @@ export default ApplicationAdapter.extend({
   },
 
   shouldBackgroundReloadRecord(store, snapshot) {
-
-    console.log("Calling shouldBackgroundReloadRecord");
     const loadedAt = snapshot.record.get('loadedAt');
 
     // if it was loaded more than an hour ago
